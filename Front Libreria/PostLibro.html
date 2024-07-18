@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de Libro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Alta de Libro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="GetLibros.html">Listado de libros <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="PutLibro.html">Atualizar Libro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="DeleteLibro.html">Borrar Libro</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Alta de Libro</h1>
+        <form id="formPost">
+
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaPublicacion">Fecha de Publicación</label>
+                <input type="date" class="form-control" id="fechaPublicacion" name="fechaPublicacion" required>
+            </div>
+            <div class="form-group">
+                <label for="autorId">Autor</label>
+                <select class="form-control" id="autorId" name="autorId">
+                    <option selected disabled>Seleccione el autor..</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="generoId">Género</label>
+                <select class="form-control" id="generoId" name="generoId">
+                    <option selected disabled>Seleccione el genero..</option>
+                </select>
+            </div>
+            <button type="submit" id="btnGuardar" class="btn btn-primary">Guardar</button>
+
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/jsFilePost.js"></script>
+
+</body>
+</html>
